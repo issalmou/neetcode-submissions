@@ -1,0 +1,8 @@
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        if len(t)!=len(s) or len(s)<1 or len(t)>(5*10000):
+            return False
+        for i in t:
+            if t.count(i.lower())!=s.count(i.lower()):
+                return False
+        return True
